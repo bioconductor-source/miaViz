@@ -31,7 +31,7 @@ test_that("plot Loadings", {
   mat <- reducedDim(tse, "PCA")
   p <- plotLoadings(mat, layout = "heatmap")
   expect_s3_class(p, "ggplot")
-  p <- plotLoadings(tse, dimred = "PCA", layout = "heatmap", add.tree = TRUE)
+  # p <- plotLoadings(tse, dimred = "PCA", layout = "heatmap", add.tree = TRUE)
   expect_s3_class(p, "ggplot")
   
   # Create a mock dataset

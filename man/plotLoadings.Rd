@@ -87,9 +87,6 @@ tse <- agglomerateByPrevalence(tse, rank="Phylum", update.tree = TRUE)
 tse <- transformAssay(tse, method = "clr", pseudocount = 1)
 tse <- runPCA(tse, ncomponents = 5, assay.type = "clr")
 
-#' # Plotting feature loadings with tree
-plotLoadings(tse, dimred = "PCA", layout = "heatmap", add.tree = TRUE)
-
 # Plotting matrix as a barplot
 loadings_matrix <- attr(reducedDim(tse, "PCA"), "rotation")
 plotLoadings(loadings_matrix)
